@@ -5,7 +5,7 @@ import {
 } from "@tanstack/react-query"
 import styles from "./page.module.scss"
 import ReactQueryUseSample from "./_components/ReactQueryUseSample"
-import { readPosts } from "@/services/posts/apis"
+import { readPosts } from "@/service/posts/apis"
 import ReduxUseExample from "./_components/ReduxUseExample"
 
 export default async function HomePage() {

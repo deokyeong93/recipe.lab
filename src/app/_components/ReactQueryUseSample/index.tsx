@@ -1,6 +1,6 @@
 "use client"
 
-import { readPosts } from "@/services/posts/apis"
+import { readPosts } from "@/service/posts/apis"
 import { useQuery } from "@tanstack/react-query"
 
 // NOTE: 프로젝트시 DELETE 대상

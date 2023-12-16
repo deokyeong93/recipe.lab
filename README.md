@@ -1,42 +1,20 @@
-# 과제 템플릿
+# RECIPE.LAB
+![프로젝트](https://github.com/deokyeong93/recipe.lab/assets/66895208/7314fbd1-a285-4eb9-82b6-e5fabb5f600b)
+### `레시피랩`은 음식 레시피를 공유하는 SNS 서비스입니다.
 
-프론트엔드 과제에 참여하기 위해 기본적으로 세팅한 코드 템플릿
+## 구성원
+- 허덕형 (서비스 개발, 기획, 디자인)
 
 ## 사용 스택
-
+### Front
 - typescript
 - react
 - nextjs
 - scss
 - react-query
 - redux, redux-toolkit
+### Back
+- nextjs
+- mysql
 
-### 셋업 순서
-
-- 6667952162dca ts, react, nextjs 셋업
-- c3f31320a74a8 Scss 셋업
-- 9fa9fc7895156 reqct-query 셋업
-- aa52ac296e35c redux, redux-toolkit 셋업
-
-## 폴더 구조
-
-```
-src
-├── app
-│   ├── _components
-│   │   ├── ReactQueryBoundry
-│   │   │   └── index.tsx
-│   │   └── ReactQueryUseSample
-│   │       └── index.tsx
-│   ├── favicon.ico
-│   ├── globals.scss
-│   ├── layout.tsx
-│   ├── page.module.scss
-│   └── page.tsx
-└── services
-    └── posts
-        └── apis.ts
-```
-
-- app : React와 Next.js에 종속된 소스
-- services : 비즈니스 소스 (독립)
+# 작성중

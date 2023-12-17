@@ -16,6 +16,9 @@ const sans = Noto_Sans_KR({
 export const metadata: Metadata = {
   title: METADATA.TITLE,
   description: METADATA.DESCRIPTION,
+  icons: {
+    icon: "/images/favicon.ico",
+  },
 }
 
 export default function RootLayout({ children }: RootLayoutProps) {

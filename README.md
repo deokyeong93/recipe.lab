@@ -22,6 +22,7 @@
 ### Back
 
 - nextjs
-- mysql
+- postgresql
+- sequelize, sequelize cli
 
 # 작성중

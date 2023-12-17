@@ -9,8 +9,6 @@ const env = () => {
 
 require("dotenv").config({ path: path.resolve(process.cwd(), env()) })
 
-console.log(process.env.POSTGRES_USER)
-
 module.exports = {
   development: {
     database: process.env.POSTGRES_DB,

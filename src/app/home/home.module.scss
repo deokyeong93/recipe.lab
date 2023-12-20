@@ -15,4 +15,29 @@
       font-size: 102px;
     }
   }
+
+  .search_text_field_section {
+    width: 720px;
+    height: 64px;
+    margin-bottom: 56px;
+
+    .search_text_field_wrapper {
+      margin-left: 24px;
+    }
+  }
+}
+
+@media (max-width: 1080px) {
+  .container {
+    .header_logo {
+      width: 260px;
+      height: 240px;
+    }
+
+    .header_wrapper {
+      h1 {
+        font-size: 80px;
+      }
+    }
+  }
 }

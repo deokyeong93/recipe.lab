@@ -1,8 +1,8 @@
-import { SERVICE_NAME } from "@/constant"
 import styles from "./home.module.scss"
-import Image from "next/image"
 import SearchTextField from "../_components/SearchTextField"
 import BaseButton from "../_components/BaseButton"
+import Image from "next/image"
+import { SERVICE_NAME } from "@/constant"
 
 export default function HomePage() {
   return (
@@ -27,9 +27,14 @@ export default function HomePage() {
           />
           <h1>{SERVICE_NAME}</h1>
         </header>
-        <section className={styles.search_text_field_section}>
-          <SearchTextField className={styles.search_text_field_wrapper} />
-        </section>
+
+        <div className={styles.search_text_field_wrapper}>
+          <SearchTextField
+            className={styles.search_text_field}
+            searchUrl="main/explore"
+            searchMethod="push"
+          />
+        </div>
       </section>
     </main>
   )

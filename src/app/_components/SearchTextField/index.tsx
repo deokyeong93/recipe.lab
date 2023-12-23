@@ -5,18 +5,25 @@ import TextField from "../core/TextField"
 import { INPUT_PLACEHOLDER } from "@/constant"
 import Image from "next/image"
 import styles from "./searchTextField.module.scss"
-import useSearchTextField from "./hooks"
+import useSearchTextField, { UseSearchTextFieldParams } from "./hooks"
 
 type SearchTextFieldProps = {
   placeholder?: string
   className?: string
+  searchUrl: UseSearchTextFieldParams["searchUrl"]
+  searchMethod: UseSearchTextFieldParams["searchMethod"]
 }
 
 export default function SearchTextField({
   placeholder = INPUT_PLACEHOLDER.SEARCH,
   className,
+  searchUrl,
+  searchMethod,
 }: SearchTextFieldProps) {
-  const { searchText, onTextChange, search } = useSearchTextField()
+  const { searchText, onTextChange, search } = useSearchTextField({
+    searchUrl,
+    searchMethod,
+  })
 
   return (
     <TextField.Wrapper className={className}>

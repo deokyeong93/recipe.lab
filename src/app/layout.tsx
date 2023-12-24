@@ -1,12 +1,12 @@
 import type { Metadata } from "next"
 import { Noto_Sans_KR } from "next/font/google"
 import "./globals.scss"
-import { PropsWithChildren } from "react"
+import { PropsWithChildren, ReactNode } from "react"
 import ReactQueryProvider from "./_components/ReactQueryBoundry"
 import ReduxProvider from "./_components/ReduxProvider"
 import { METADATA } from "@/constant"
 
-type RootLayoutProps = PropsWithChildren
+type RootLayoutProps = PropsWithChildren<{ modal: ReactNode }>
 
 const sans = Noto_Sans_KR({
   subsets: ["latin"],
@@ -21,12 +21,15 @@ export const metadata: Metadata = {
   },
 }
 
-export default function RootLayout({ children }: RootLayoutProps) {
+export default function RootLayout({ children, modal }: RootLayoutProps) {
   return (
     <html lang="ko">
       <body className={sans.className}>
         <ReduxProvider>
-          <ReactQueryProvider>{children}</ReactQueryProvider>
+          <ReactQueryProvider>
+            {children}
+            {modal}
+          </ReactQueryProvider>
         </ReduxProvider>
       </body>
     </html>

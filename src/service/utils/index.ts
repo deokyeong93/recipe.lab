@@ -1,4 +1,6 @@
-export const classMerge = (classNames?: string[] | string) => {
+type NestedArray<T> = T | NestedArray<T>[]
+
+export const classMerge = (classNames?: NestedArray<string | undefined>) => {
   if (!classNames) {
     return ""
   }
@@ -7,7 +9,10 @@ export const classMerge = (classNames?: string[] | string) => {
     return classNames
   }
 
-  return classNames.join(" ")
+  return classNames
+    .flat(5)
+    .filter((className) => !!className)
+    .join(" ")
 }
 
 export const mergeParmasWithUrl = (

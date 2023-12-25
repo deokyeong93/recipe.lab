@@ -1,33 +1,28 @@
 import React, { PropsWithChildren } from "react"
 import styles from "./button.module.scss"
 import Link, { LinkProps } from "next/link"
-import { classMerge } from "@/app/_helper"
+import { classMerge } from "@/service/utils"
 
 type ButtonWrapperProps = PropsWithChildren<{
   onClick?: () => void
-  classNames?: string | string[]
+  className?: string
   linkProps?: LinkProps
 }>
 
 export default function ButtonWrapper({
   children,
-  classNames,
+  className,
   linkProps,
 }: ButtonWrapperProps) {
+  const _className = classMerge([styles.wrapper, className])
+
   if (linkProps) {
     return (
-      <Link
-        {...linkProps}
-        className={`${styles.wrapper} ${classMerge(classNames)}`}
-      >
+      <Link {...linkProps} className={_className}>
         {children}
       </Link>
     )
   }
 
-  return (
-    <button className={`${styles.wrapper} ${classMerge(classNames)}`}>
-      {children}
-    </button>
-  )
+  return <button className={_className}>{children}</button>
 }

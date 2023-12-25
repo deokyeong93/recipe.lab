@@ -1,0 +1,33 @@
+.header_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.large {
+  h1 {
+    font-size: 102px;
+  }
+}
+
+@media (max-width: 1080px) {
+  .large {
+    .header_logo {
+      width: 260px;
+      height: 240px;
+    }
+
+    .header_wrapper {
+      h1 {
+        font-size: 80px;
+      }
+    }
+  }
+}
+
+.small {
+  h1 {
+    font-size: 32px;
+    padding-left: 4px;
+  }
+}

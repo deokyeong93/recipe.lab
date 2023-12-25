@@ -1,13 +1,17 @@
-import React from "react"
+import React, { ReactNode } from "react"
 import Button from "../core/Button"
 import styles from "./baseButton.module.scss"
 import { LinkProps } from "next/link"
+import { classMerge } from "@/service/utils"
 
 type BaseButtonProps = {
   onClick?: () => void
   text: string
-  color?: "transparent"
+  color?: "transparent" | string
   linkProps?: LinkProps
+  wrapperClassName?: string
+  textClassName?: string
+  textBeforeChildren?: ReactNode
 }
 
 export default function BaseButton({
@@ -15,6 +19,9 @@ export default function BaseButton({
   text,
   color,
   linkProps,
+  wrapperClassName,
+  textClassName,
+  textBeforeChildren,
 }: BaseButtonProps) {
   const buttonColorClassName =
     color === "transparent"
@@ -24,10 +31,11 @@ export default function BaseButton({
   return (
     <Button.Wrapper
       onClick={onClick}
-      classNames={buttonColorClassName}
+      className={classMerge([buttonColorClassName, wrapperClassName])}
       linkProps={linkProps}
     >
-      <Button.Text text={text} />
+      <Button.Slot>{textBeforeChildren}</Button.Slot>
+      <Button.Text text={text} className={textClassName} />
     </Button.Wrapper>
   )
 }

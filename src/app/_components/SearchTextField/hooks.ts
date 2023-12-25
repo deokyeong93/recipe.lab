@@ -1,4 +1,4 @@
-import { mergeParmasWithUrl } from "@/app/_helper"
+import { mergeParmasWithUrl } from "@/service/utils"
 import { useRouter } from "next/navigation"
 import { ChangeEvent, FormEvent, useState } from "react"
 

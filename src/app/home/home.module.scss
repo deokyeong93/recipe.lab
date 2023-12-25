@@ -17,16 +17,6 @@
     justify-content: center;
     height: 75dvh;
 
-    .header_wrapper {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      h1 {
-        font-size: 102px;
-      }
-    }
-
     .search_text_field_wrapper {
       width: 720px;
       height: 64px;
@@ -34,23 +24,6 @@
       .search_text_field {
         margin-top: 24px;
         margin-left: 24px;
-      }
-    }
-  }
-}
-
-@media (max-width: 1080px) {
-  .container {
-    .main_section {
-      .header_logo {
-        width: 260px;
-        height: 240px;
-      }
-
-      .header_wrapper {
-        h1 {
-          font-size: 80px;
-        }
       }
     }
   }

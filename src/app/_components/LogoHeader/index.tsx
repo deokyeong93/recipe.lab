@@ -6,7 +6,7 @@ import { classMerge } from "@/service/utils"
 
 type LogoHeaderProps = {
   size: "large" | "small"
-  className: string
+  className?: string
   onClick?: () => void
 }
 

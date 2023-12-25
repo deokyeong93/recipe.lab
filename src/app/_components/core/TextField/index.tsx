@@ -1,7 +1,7 @@
 import TextFieldInput from "./Input"
 import TextFieldSlot from "./Slot"
 import TextFieldWrapper from "./Wrapper"
-import TextFieldForm from "./form"
+import TextFieldForm from "./Form"
 
 const TextField = {
   Wrapper: TextFieldWrapper,

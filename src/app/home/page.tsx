@@ -3,6 +3,7 @@ import SearchTextField from "../_components/SearchTextField"
 import BaseButton from "../_components/BaseButton"
 import Image from "next/image"
 import { SERVICE_NAME } from "@/constant"
+import LogoHeader from "../_components/LogoHeader"
 
 export default function HomePage() {
   return (
@@ -17,17 +18,7 @@ export default function HomePage() {
       </section>
 
       <section className={styles.main_section}>
-        <header className={styles.header_wrapper}>
-          <Image
-            className={styles.header_logo}
-            src={"/images/logo.png"}
-            alt="logo"
-            width={380}
-            height={360}
-          />
-          <h1>{SERVICE_NAME}</h1>
-        </header>
-
+        <LogoHeader size="large" />
         <div className={styles.search_text_field_wrapper}>
           <SearchTextField
             className={styles.search_text_field}
